@@ -11,6 +11,11 @@ This project is a **React-based podcast preview application** that fetches podca
 - Maps genre IDs to titles using static data from `data.js`
 - Shows last updated date in a localized, human-readable format
 - Displays a spinner during loading and an error message on failure
+- Has a search bar to help find podcasts that updates the results dynamically
+- Has sorting options to allow finding podcasts faster
+- Has genre filter that shows podcasts of the required genre
+- Combination filtering, all search options work together
+- Pagination through a load more system
 - Clean, reusable component structure
 
 ---
@@ -56,6 +61,7 @@ This project is a **React-based podcast preview application** that fetches podca
 - Understand how to fetch and display remote data in React
 - Apply conditional rendering for loading and error states
 - Use utility modules and static data in a real-world project
+- State management
 
 ---
 
