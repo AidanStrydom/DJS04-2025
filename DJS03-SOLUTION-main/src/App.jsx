@@ -23,6 +23,9 @@ export default function App() {
   const [sortOption, setSortOption] = useState("a-z");
   const [selectedGenre, setSelectedGenre] = useState("all");
 
+  // Pagination state
+  const [displayCount, setDisplayCount] = useState(20);
+
   useEffect(() => {
     fetchPodcasts(setPodcasts, setError, setLoading);
   }, []);
@@ -64,7 +67,9 @@ export default function App() {
     return filtered;
   };
 
-  const displayedPodcasts = getFilteredAndSortedPodcasts();
+  const filteredPodcasts = getFilteredAndSortedPodcasts();
+  const displayedPodcasts = filteredPodcasts.slice(0, displayCount);
+  const hasMore = displayCount < filteredPodcasts.length;
 
   return (
     <>
